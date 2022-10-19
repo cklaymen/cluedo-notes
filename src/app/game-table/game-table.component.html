@@ -1,0 +1,10 @@
+<table class="game-table">
+    <tr>
+        <th></th>
+        <th *ngFor="let column of columns" [title]="column" class="game-table-status">{{ column[0] }}</th>
+    </tr>
+    <tr *ngFor="let row of rows">
+        <td>{{row}}</td>
+        <td *ngFor="let column of columns" class="game-table-status"><app-status></app-status></td>
+    </tr>
+</table>

@@ -1,0 +1,30 @@
+.status-0 {
+}
+
+.status-1 {
+    background-color: gold;
+    &:before {
+        content: "?"
+    }
+}
+
+.status-2 {
+    background-color: lightgreen;
+    &:before {
+        content: "✓"
+    }
+}
+
+.status {
+    width: 30px;
+    height: 30px;
+    border: 1px solid lightgray;
+    cursor: pointer;
+    user-select: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+}

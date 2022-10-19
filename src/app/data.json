@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Tajemnice pociągu",
+    "suspects": [
+      "Pułkownik Fritz von Gelbsenf",
+      "Kapitan Hans Pflaume",
+      "Sierżant Zdenek Zelenka",
+      "Madame Nicole Rouge",
+      "Major Eva Weiss",
+      "Sanitariuszka Anna Chaber ps. \"Pawie Oczko\""
+    ],
+    "murder_weapons": [
+      "Sztylet",
+      "Świecznik",
+      "Rewolwer",
+      "Lina",
+      "Gazrurka",
+      "Klucz francuski"
+    ],
+    "scenes": [
+      "Komnata książęca",
+      "Sala balowa",
+      "Tajemna komnata",
+      "Piwnica z winami",
+      "Lochy zamkowe",
+      "Tajna siedziba ruchu oporu",
+      "Bocznica kolejowa",
+      "Opuszczona kopalnia",
+      "Las (65 km torów)"
+    ]
+  }
+]

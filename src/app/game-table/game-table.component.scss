@@ -1,0 +1,12 @@
+.game-table {
+    width: 100%;
+    max-width: 600px;
+
+    & > tr {
+        background-color: #f7f7f7;
+    }
+}
+
+.game-table-status {
+    width: 25px;
+}

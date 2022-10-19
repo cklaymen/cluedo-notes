@@ -5,17 +5,32 @@
       (change)="setGame($event.target.value)"
       name="selectedGame"
     >
-      <option *ngFor="let gameName of gameNames; let i = index" [value]="i">{{
-        gameName
-      }}</option>
+      <option *ngFor="let gameName of gameNames; let i = index" [value]="i">
+        {{ gameName }}
+      </option>
     </select>
   </form>
   <h1>{{ game && game.name }}</h1>
-  <p>{{ players.join(", ") }}</p>
-  <app-game-table [rows]="game && game.suspects" [columns]="players"></app-game-table>
-  <app-game-table [rows]="game && game.murder_weapons" [columns]="players"></app-game-table>
-  <app-game-table [rows]="game && game.scenes" [columns]="players"></app-game-table>
-  <!-- <game-table rows=[] columns=[]> -->
+  <div *ngIf="game">
+    <app-players-list
+      [players]="players"
+      (addPlayerName)="addPlayerName($event)"
+      (removePlayer)="removePlayer($event)"
+    ></app-players-list>
+    <app-game-table
+      [rows]="game && game.suspects"
+      [columns]="players"
+    ></app-game-table>
+    <app-game-table
+      [rows]="game && game.murder_weapons"
+      [columns]="players"
+    ></app-game-table>
+    <app-game-table
+      [rows]="game && game.scenes"
+      [columns]="players"
+    ></app-game-table>
   </div>
+  <!-- <game-table rows=[] columns=[]> -->
+</div>
 
 <router-outlet></router-outlet>

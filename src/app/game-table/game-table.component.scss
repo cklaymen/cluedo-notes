@@ -2,8 +2,14 @@
     width: 100%;
     max-width: 600px;
 
-    & > tr {
+    & tr {
         background-color: #f7f7f7;
+    }
+    & thead th {
+        height: 1em;
+    }
+    & tbody td {
+        height: 30px;
     }
 }
 

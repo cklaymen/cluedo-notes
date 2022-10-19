@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor="let player of players; index as index">
+    {{ player }} <button (click)="removePlayer.emit(index)">x</button>
+  </li>
+</ul>
+<form (ngSubmit)="onSubmit()">
+  <input [(ngModel)]="playerName" />
+  <button type="submit">Dodaj gracza</button>
+</form>

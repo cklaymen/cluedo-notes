@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GameTableComponent } from './game-table/game-table.component';
 import { StatusComponent } from './game-table/status/status.component';
+import { PlayersListComponent } from './players-list/players-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GameTableComponent,
-    StatusComponent
+    StatusComponent,
+    PlayersListComponent
   ],
   imports: [
     BrowserModule,

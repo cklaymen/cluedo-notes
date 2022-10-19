@@ -1,19 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { Status } from './status';
+import { Component, OnInit } from "@angular/core";
+import { Status } from "./status";
 
 @Component({
-  selector: 'app-status',
-  templateUrl: './status.component.html',
-  styleUrls: ['./status.component.scss']
+  selector: "app-status",
+  templateUrl: "./status.component.html",
+  styleUrls: ["./status.component.scss"],
 })
 export class StatusComponent implements OnInit {
-
   status: Status;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
-    this.status = Status.DO_NOT_HAVE;
+    this.status = Status.NO_DATA;
   }
 
   getName(): string {
@@ -23,8 +22,8 @@ export class StatusComponent implements OnInit {
   change(): void {
     let newStatus: Status;
 
-    switch(this.status) {
-      case Status.DO_NOT_HAVE:
+    switch (this.status) {
+      case Status.NO_DATA:
         newStatus = Status.MAYBE_HAVE;
         break;
 
@@ -33,8 +32,12 @@ export class StatusComponent implements OnInit {
         break;
 
       case Status.HAVE:
-      default:
         newStatus = Status.DO_NOT_HAVE;
+        break;
+
+      case Status.DO_NOT_HAVE:
+      default:
+        newStatus = Status.NO_DATA;
         break;
     }
 
